@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Van Halen Live in Dallas 1991 - Preorder the new live album at Accord Music Store">
+    <title>Van Halen Live in Dallas 1991 - Accord Music Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color scheme - enhanced with more vibrant colors */
+            --primary-color: #e26e38;
+            --primary-dark: #c55e2c;
+            --primary-light: #f59066;
+            --secondary-color: #d1ece3;
+            --secondary-dark: #a8d5c8;
+            --tertiary-color: #e7ecf8;
+            --tertiary-dark: #c7d2ee;
+            --price-color: #f9d7ef;
+            --price-dark: #f0b1dd;
+            --text-color: #333;
+            --text-light: #666;
+            --border-color: #ddd;
+            --background-color: #f8f9fa;
+            --white: #ffffff;
+            --black: #000000;
+            --success: #28a745;
+            --danger: #dc3545;
+            
+            /* Spacing variables */
+            --spacing-xs: 5px;
+            --spacing-sm: 10px;
+            --spacing-md: 15px;
+            --spacing-lg: 20px;
+            --spacing-xl: 30px;
+            
+            /* Typography */
+            --font-family: 'Montserrat', sans-serif;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-md: 1.125rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-xxl: 2rem;
+            
+            /* Effects */
+            --box-shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+            --box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+            --box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.25s ease;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            font-family: var(--font-family);
+            max-width: 1200px;
+            margin: 0 auto;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            font-size: var(--font-size-base);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover, a:focus {
+            color: var(--primary-color);
+            outline: none;
+        }
+        
+        button:focus, a:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Header Section - Modernized */
+        .site-header {
+            display: flex;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            padding: var(--spacing-md) 0;
+            box-shadow: var(--box-shadow-md);
+        }
+        
+        .logo-container {
+            width: 40%;
+            padding-left: var(--spacing-xl);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: var(--font-size-xxl);
+            color: var(--white);
+            letter-spacing: 1px;
+            position: relative;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+        
+        .logo::after {
+            content: 'MUSIC';
+            position: absolute;
+            bottom: 5px;
+            right: -5px;
+            font-size: var(--font-size-sm);
+            opacity: 0.8;
+        }
+        
+        .main-nav {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .main-nav a {
+            color: var(--white);
+            font-weight: 600;
+            font-size: var(--font-size-base);
+            letter-spacing: 0.5px;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+            transition: background-color var(--transition-fast);
+            text-transform: uppercase;
+        }
+        
+        .main-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Secondary Navigation - Enhanced */
+        .secondary-nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--box-shadow-sm);
+        }
+        
+        .secondary-nav a {
+            margin-left: var(--spacing-lg);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .nav-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Breadcrumb - Refined */
+        .breadcrumb {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            font-size: var(--font-size-sm);
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-light);
+            transition: color var(--transition-fast);
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-separator {
+            margin: 0 var(--spacing-xs);
+            color: var(--text-light);
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            margin-right: var(--spacing-xs);
+        }
+        
+        /* Main Content - Modernized */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 600px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--white);
+        }
+        
+        /* Product Image Section - Enhanced */
+        .product-image {
+            width: 50%;
+            padding: 0;
+            background-color: var(--white);
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .product-title {
+            background: linear-gradient(to right, var(--secondary-color), var(--secondary-dark));
+            padding: var(--spacing-md) var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+            border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+            box-shadow: var(--box-shadow-sm);
+        }
+        
+        .product-title h1 {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-xs);
+            font-weight: 700;
+        }
+        
+        .product-title p {
+            font-size: var(--font-size-md);
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .album-container {
+            padding: var(--spacing-lg);
+            position: relative;
+        }
+        
+        .album-cover {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            box-shadow: var(--box-shadow-lg);
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            transition: transform var(--transition-normal);
+        }
+        
+        .album-cover:hover {
+            transform: scale(1.02);
+        }
+        
+        .album-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .release-banner {
+            position: absolute;
+            bottom: 170px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+            padding: 10px 0;
+            text-align: center;
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        /* Product Info Section - Modernized */
+        .product-info {
+            width: 50%;
+        }
+        
+        .info-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .tab {
+            padding: var(--spacing-md) var(--spacing-xl);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            background-color: transparent;
+            border: none;
+            font-size: var(--font-size-md);
+            font-family: var(--font-family);
+            position: relative;
+            transition: all var(--transition-fast);
+        }
+        
+        .tab.active {
+            background-color: var(--tertiary-color);
+            font-weight: 600;
+        }
+        
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .tab:not(.active) {
+            color: var(--text-light);
+        }
+        
+        .tab:hover:not(.active) {
+            background-color: rgba(231, 236, 248, 0.3);
+        }
+        
+        .circle-icon {
+            font-size: var(--font-size-md);
+            display: inline-block;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .product-details {
+            background-color: var(--tertiary-color);
+        }
+        
+        .detail-row {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--tertiary-dark);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            width: 200px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .detail-value {
+            flex: 1;
+            color: var(--text-light);
+        }
+        
+        /* Price Section - Enhanced */
+        .price-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: var(--spacing-lg);
+        }
+        
+        .price {
+            background: linear-gradient(135deg, var(--price-color), var(--price-dark));
+            padding: var(--spacing-lg);
+            text-align: right;
+            position: relative;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--box-shadow-md);
+            transition: transform var(--transition-normal);
+        }
+        
+        .price:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .price-value {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--text-color);
+        }
+        
+        .price-cents {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .price-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            position: absolute;
+            top: var(--spacing-xs);
+            left: var(--spacing-xs);
+            font-weight: 500;
+        }
+        
+        .buy-button {
+            display: block;
+            margin-top: var(--spacing-md);
+            background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: var(--spacing-md) var(--spacing-xl);
+            font-size: var(--font-size-md);
+            font-weight: 600;
+            font-family: var(--font-family);
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--box-shadow-sm);
+        }
+        
+        .buy-button:hover {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary-dark));
+            box-shadow: var(--box-shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .tracklist {
+            padding: var(--spacing-lg);
+            list-style-position: inside;
+            background-color: var(--white);
+        }
+        
+        .tracklist li {
+            padding: var(--spacing-md) var(--spacing-sm);
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color var(--transition-fast);
+            border-radius: var(--border-radius-sm);
+        }
+        
+        .tracklist li:hover {
+            background-color: var(--tertiary-color);
+        }
+        
+        /* Featured Albums Section - Enhanced */
+        .featured-albums {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .featured-albums h2 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: 600;
+            color: var(--text-color);
+            position: relative;
+        }
+        
+        .featured-albums h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        
+        .album-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-md);
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+        
+        .album-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .album-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-normal);
+        }
+        
+        .album-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .album-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+        
+        .album-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .album-card h3 {
+            padding: 0.75rem 1rem 0.5rem;
+            font-size: var(--font-size-md);
+            margin: 0;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .album-card p {
+            padding: 0 1rem 1rem;
+            color: var(--text-light);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+        }
+        
+        /* Footer - Enhanced */
+        footer {
+            background: linear-gradient(135deg, #333, #222);
+            color: var(--white);
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-lg);
+            margin-top: 3rem;
+            border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .copyright {
+            margin-top: var(--spacing-md);
+            font-size: var(--font-size-sm);
+            opacity: 0.8;
+        }
+        
+        /* Enhanced Responsive Design */
+        @media (max-width: 992px) {
+            .logo-container {
+                padding-left: var(--spacing-md);
+            }
+            
+            .main-nav {
+                justify-content: flex-end;
+                padding-right: var(--spacing-md);
+            }
+            
+            .main-nav a {
+                padding: var(--spacing-xs);
+                font-size: var(--font-size-sm);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .site-header {
+                flex-direction: column;
+                align-items: center;
+                padding: var(--spacing-sm) 0;
+            }
+            
+            .logo-container {
+                width: 100%;
+                padding: var(--spacing-sm);
+                justify-content: center;
+                margin-bottom: var(--spacing-sm);
+            }
+            
+            .main-nav {
+                width: 100%;
+                padding: var(--spacing-sm);
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: var(--spacing-xs);
+            }
+            
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .product-image, .product-info {
+                width: 100%;
+                border-right: none;
+            }
+            
+            .detail-label {
+                width: 100%;
+                margin-bottom: var(--spacing-xs);
+            }
+            
+            .release-banner {
+                bottom: 15%;
+            }
+            
+            .price-container {
+                justify-content: center;
+            }
+            
+            .price {
+                min-width: 250px;
+            }
+            
+            .album-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tab {
+                padding: var(--spacing-sm);
+                font-size: var(--font-size-sm);
+            }
+            
+            .detail-row {
+                padding: var(--spacing-sm);
+            }
+            
+            .price-value {
+                font-size: 48px;
+            }
+            
+            .price-cents {
+                font-size: 20px;
+            }
+            
+            .buy-button {
+                padding: var(--spacing-sm) var(--spacing-md);
+                font-size: var(--font-size-base);
+            }
+            
+            .album-grid {
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="/" class="logo">ACCORD</a>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#">KATALOG</a>
+            <a href="#" aria-haspopup="true">BUTIKKER</a>
+            <a href="#">SÆLG &amp; BYT</a>
+            <a href="#">GRADUERING</a>
+            <a href="#">ACCORD</a>
+        </nav>
+    </header>
+    
+    <!-- Secondary Nav -->
+    <nav class="secondary-nav" aria-label="Secondary navigation">
+        <a href="#" aria-label="Search"><span class="nav-icon">🔍</span> SØG</a>
+        <a href="#" aria-label="Shopping cart with 0 items"><span class="nav-icon">📦</span> KASSE(0)</a>
+    </nav>
+    
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="/">Hjem</a> 
+        <span class="breadcrumb-separator">/</span> 
+        <a href="/preorders">Preorders</a>
+        <span class="breadcrumb-separator">/</span>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Product Image Section -->
+        <section class="product-image" aria-labelledby="product-title">
+            <div class="product-title">
+                <h1 id="product-title">LIVE IN DALLAS 1991</h1>
+                <p>Van Halen</p>
+            </div>
+            
+            <div class="album-container">
+                <div class="album-cover">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23282828'/%3E%3Cstop offset='100%25' stop-color='%23111111'/%3E%3C/linearGradient%3E%3ClinearGradient id='redGrad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23cc3333'/%3E%3Cstop offset='100%25' stop-color='%23990000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='500' fill='url(%23bg)'/%3E%3Cg transform='translate(50, 50)'%3E%3Ctext x='200' y='50' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3EVAN HALEN%3C/text%3E%3Ctext x='200' y='90' font-family='Arial' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3ELIVE IN%3C/text%3E%3Ctext x='200' y='130' font-family='Arial' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3EDALLAS 1991%3C/text%3E%3C/g%3E%3Cpath d='M0 300 L500 300 L500 500 L0 500 Z' fill='url(%23redGrad)'/%3E%3Cg transform='translate(0, 300)'%3E%3Cpath d='M50 50 Q125 10 200 50 T350 50 T500 50' stroke='white' stroke-width='5' fill='none' opacity='0.7'/%3E%3Cpath d='M50 70 Q125 30 200 70 T350 70 T500 70' stroke='white' stroke-width='3' fill='none' opacity='0.5'/%3E%3C/g%3E%3Cg transform='translate(250, 150)'%3E%3Ccircle cx='0' cy='0' r='60' fill='url(%23redGrad)' opacity='0.9'/%3E%3Ccircle cx='0' cy='0' r='55' fill='%23111' opacity='0.8'/%3E%3Ccircle cx='0' cy='0' r='25' fill='url(%23redGrad)'/%3E%3Ccircle cx='0' cy='0' r='5' fill='white'/%3E%3C/g%3E%3Cg transform='translate(400, 100)'%3E%3Crect x='-15' y='0' width='30' height='150' fill='url(%23redGrad)' rx='5' ry='5'/%3E%3Cpath d='M-15 20 L15 20 M-15 40 L15 40 M-15 60 L15 60 M-15 80 L15 80 M-15 100 L15 100 M-15 120 L15 120' stroke='white' stroke-width='2' opacity='0.5'/%3E%3C/g%3E%3Cg transform='translate(100, 100)'%3E%3Cpath d='M0,0 L0,150 M30,0 L30,150 M60,0 L60,150' stroke='url(%23redGrad)' stroke-width='10' opacity='0.7'/%3E%3C/g%3E%3Ctext x='50%25' y='94%25' font-family='Arial' font-size='16' font-weight='bold' text-anchor='middle' fill='white'%3EPREMIUM LIVE RECORDING - REMASTERED 2025%3C/text%3E%3C/svg%3E" 
+                         alt="Van Halen Live in Dallas 1991 album cover - Stylized design with band logo and sound wave graphics"
+                         loading="lazy">
+                    <div class="release-banner">
+                        <strong>RELEASE: 28.3.2025</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Info Section -->
+        <section class="product-info">
+            <div class="info-tabs" role="tablist">
+                <button class="tab active" id="info-tab" role="tab" aria-selected="true" aria-controls="info-content">
+                    <span class="circle-icon" aria-hidden="true">⬤</span> INFO
+                </button>
+                <button class="tab" id="tracklist-tab" role="tab" aria-selected="false" aria-controls="tracklist-content">
+                    <span class="circle-icon" aria-hidden="true">▶</span> TRACKLIST
+                </button>
+            </div>
+            
+            <div class="tab-contents">
+                <div id="info-content" class="tab-content active" role="tabpanel" aria-labelledby="info-tab">
+                    <div class="product-details">
+                        <div class="detail-row">
+                            <div class="detail-label">STAND, MEDIE/COVER:</div>
+                            <div class="detail-value">Ny</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">FORMAT:</div>
+                            <div class="detail-value">CD, Album</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">MEDIE ANTAL:</div>
+                            <div class="detail-value">1</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">GENRE/SUBGENRE:</div>
+                            <div class="detail-value">Heavy</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">UDGIVET:</div>
+                            <div class="detail-value">Europe 2025</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">PRIS:</div>
+                            <div class="detail-value"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-container">
+                        <div class="price">
+                            <span class="price-label">PRIS</span>
+                            <div class="price-value">249</div>
+                            <div class="price-cents">95</div>
+                            <button class="buy-button">Læg i kurv</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tracklist-content" class="tab-content" role="tabpanel" aria-labelledby="tracklist-tab">
+                    <ol class="tracklist">
+                        <li>Poundcake</li>
+                        <li>Judgement Day</li>
+                        <li>When It's Love</li>
+                        <li>Spanked</li>
+                        <li>Ain't Talkin' 'Bout Love</li>
+                        <li>In 'n' Out</li>
+                        <li>Dreams</li>
+                        <li>Jump</li>
+                        <li>Panama</li>
+                        <li>Why Can't This Be Love</li>
+                        <li>316</li>
+                        <li>Guitar Solo (Eruption)</li>
+                        <li>You Really Got Me</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    {% if featured_albums %}
+    <section class="featured-albums">
+        <h2>Featured Albums</h2>
+        <div class="album-grid">
+            {% for album in featured_albums %}
+            <div class="album-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f5f5f5'/%3E%3Ccircle cx='150' cy='150' r='80' fill='%23e26e38' opacity='0.7'/%3E%3Ctext x='150' y='140' font-family='Arial' font-size='16' text-anchor='middle' fill='%23333'%3E{{ album.title|default('Album') }}%3C/text%3E%3Ctext x='150' y='160' font-family='Arial' font-size='12' text-anchor='middle' fill='%23333'%3E{{ album.artist_name|default('Artist') }}%3C/text%3E%3C/svg%3E" 
+                     alt="{{ album.title }}" loading="lazy">
+                <h3>{{ album.title }}</h3>
+                <p>{{ album.artist_name }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+    
+    <footer>
+        <div class="footer-content">
+            <p>Accord Music Store - Din specialist i vinyl, CD'er og specialudgivelser</p>
+            <p class="copyright">© 2025 Accord Music Store. Alle rettigheder forbeholdes.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced tab functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    
+                    // Show corresponding content
+                    const contentId = tab.getAttribute('aria-controls');
+                    const content = document.getElementById(contentId);
+                    content.classList.add('active');
+                    
+                    // Add animation for smooth transition
+                    content.style.animation = 'fadeIn 0.3s';
+                    setTimeout(() => {
+                        content.style.animation = '';
+                    }, 300);
+                });
+            });
+        });
+        
+        // Add animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(5px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

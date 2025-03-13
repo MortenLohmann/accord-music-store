@@ -1,0 +1,28 @@
+# Ignore configuration files with sensitive data
+config.php
+.env
+
+# Ignore generated placeholder images
+*-placeholder.png
+
+# Ignore OS files
+.DS_Store
+Thumbs.db 
+
+# Python virtual environment
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask stuff
+instance/
+.webassets-cache
+app.log
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-workspace 

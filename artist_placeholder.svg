@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#333333"/>
+  
+  <!-- Abstract artist silhouette -->
+  <circle cx="150" cy="120" r="70" fill="#222222" stroke="#444444" stroke-width="2"/>
+  <path d="M80,230 C80,180 220,180 220,230 L220,300 L80,300 Z" fill="#222222" stroke="#444444" stroke-width="2"/>
+  
+  <!-- Microphone illustration -->
+  <rect x="135" y="160" width="30" height="80" rx="5" fill="#555555"/>
+  <circle cx="150" cy="160" r="25" fill="#666666" stroke="#777777" stroke-width="3"/>
+  <circle cx="150" cy="160" r="15" fill="#888888"/>
+  
+  <!-- Text -->
+  <text x="150" y="260" font-family="Arial, sans-serif" font-size="16" fill="#f0f0f0" text-anchor="middle">ARTIST</text>
+  <text x="150" y="280" font-family="Arial, sans-serif" font-size="12" fill="#999999" text-anchor="middle">ACCORD MUSIC STORE</text>
+</svg> 
