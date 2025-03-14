@@ -134,7 +134,7 @@ graph TD
 A simplified view showing which layers are most affected by each cross-cutting concern:
 
 ```mermaid
-graph LR
+flowchart LR
     %% Style definitions
     classDef securityConcern fill:#ffcccb,stroke:#333,stroke-width:1px
     classDef loggingConcern fill:#fffacd,stroke:#333,stroke-width:1px
@@ -155,11 +155,35 @@ graph LR
     DAL[DATA ACCESS]:::dataAccessLayer
     IL[INFRASTRUCTURE]:::infrastructureLayer
     
-    %% Simplified connections with wider arrows for higher impact
-    Security -- Critical --> PL & AL & DAL & IL
-    Logging -- Moderate --> PL & AL & DAL & IL
-    Performance -- Critical --> PL & DAL & IL
-    Performance -- Moderate --> AL
+    %% Simplified connections with wider arrows 
+    Security -->|Critical| PL
+    Security -->|Critical| AL
+    Security -->|Critical| DAL
+    Security -->|Critical| IL
+    
+    Logging -->|Moderate| PL
+    Logging -->|Moderate| AL
+    Logging -->|Moderate| DAL
+    Logging -->|Moderate| IL
+    
+    Performance -->|Critical| PL
+    Performance -->|Moderate| AL
+    Performance -->|Critical| DAL
+    Performance -->|Critical| IL
+```
+
+## Alternate Impact Visualization
+
+A bar chart representation of the impact levels:
+
+```mermaid
+%%{init: {"theme": "base", "themeVariables": { "primaryColor": "#ffcccb", "secondaryColor": "#fffacd", "tertiaryColor": "#e6e6fa" }}}%%
+pie showData
+    title Impact Distribution by Concern
+    "Security (Critical)" : 4
+    "Logging (Moderate)" : 4
+    "Performance (Critical)" : 3
+    "Performance (Moderate)" : 1
 ```
 
 ## Key Benefits of the Matrix Approach
