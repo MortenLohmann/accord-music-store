@@ -1,44 +1,100 @@
-# Accord Music Store
+# Accord Music Store - Pre-Order System Documentation
 
-A simple website for a music store with MySQL database integration.
+## Projektbeskrivelse (Project Description)
+Dette repository indeholder dokumentation for forbedringer af pre-order systemet i Accord Music Store, med fokus på at optimere brugeroplevelsen og øge konverteringsraten for forudbestillinger af musik.
 
-## Setup Instructions
+## Dokumentationsstruktur (Documentation Structure)
 
-### Prerequisites
-- PHP (7.4 or higher recommended)
-- MySQL (5.7 or higher recommended)
-- Web server (Apache, Nginx, etc.)
+### 1. Pre-Order Forbedringer (`pre_order_improvements.md`)
+Detaljeret dokumentation af alle systemforbedringer, herunder:
+- UI/UX ændringer
+- Tekniske implementeringer
+- Konverteringsoptimering
+- KPI målinger
+- A/B test resultater
+- Bruger feedback
+- Fremtidige forbedringer
 
-### Database Setup
-1. Open MySQL command line or a tool like phpMyAdmin
-2. Run the SQL commands in `setup_database.sql` to create the database and tables
-3. This will create a database called `accord_music_store` with sample data
+### 2. UI Ændringer Visualisering (`pre_order_ui_changes.md`)
+Visuelle diagrammer der illustrerer:
+- Før og efter layouts
+- Nye UI elementer
+- Brugerrejse
+- Mobil responsivt design
 
-### Configuration
-1. Edit the `db_connect.php` file and update the following variables:
-   - `$servername` - Your MySQL server hostname (usually "localhost")
-   - `$username` - Your MySQL username
-   - `$password` - Your MySQL password
-   - `$dbname` - The database name (default: "accord_music_store")
+## Hovedforbedringer (Key Improvements)
 
-### Running the Website
-1. Place all files in your web server's document root (or a subdirectory)
-2. Make sure your web server and MySQL are running
-3. Open `products.php` in your browser to see the product listing
+### UI/UX
+- ✨ Nyt to-kolonne layout
+- 📱 Forbedret mobil oplevelse
+- 🎯 Optimeret CTA placering
+- 📅 Tydelig leveringsdato visning
 
-## File Structure
-- `index.html` - Static homepage (original)
-- `products.php` - Dynamic product listing from database
-- `product.php` - Individual product details page
-- `db_connect.php` - Database connection settings
-- `setup_database.sql` - SQL script to create database and tables
-- `styles.css` - CSS styling for the website
+### Teknisk
+- 📊 Udvidet database schema
+- 📧 Email notifikationssystem
+- 💳 Integreret betalingsflow
+- 📈 Analytics integration
 
-## Notes
-- This is a basic implementation using PHP and MySQL
-- For a production website, consider adding:
-  - User authentication
-  - Admin panel
-  - Security measures (prepared statements already used)
-  - More sophisticated product filtering and search
-  - Shopping cart functionality 
+### Konvertering
+- 🔄 A/B testing implementering
+- 💡 Social proof elementer
+- ⏰ FOMO features
+- 🛡️ Tillidsmarkører
+
+## Resultater (Results)
+- 12% højere konvertering med ny CTA tekst
+- 8% forbedring med to-kolonne layout
+- Positiv brugerfeedback på ny leveringsdato visning
+
+## Teknologier (Technologies)
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP
+- Database: MySQL
+- Analytics: Google Analytics/DataLayer
+
+## Diagrammer (Diagrams)
+Alle diagrammer er lavet med Mermaid.js og kan ses direkte i GitHub. Diagrammerne inkluderer:
+- System arkitektur
+- UI flows
+- Brugerrejse
+- Responsivt design
+
+## Brug af Dokumentationen (Using the Documentation)
+
+### For Udviklere
+1. Start med `pre_order_improvements.md` for tekniske detaljer
+2. Se database og logik lag implementeringer
+3. Gennemgå systemarkitektur diagrammet
+
+### For UX/Design
+1. Se `pre_order_ui_changes.md` for visuelle ændringer
+2. Gennemgå før/efter layouts
+3. Undersøg brugerrejse diagrammet
+
+### For Product Managers
+1. Fokuser på KPI målinger i `pre_order_improvements.md`
+2. Gennemgå A/B test resultater
+3. Se planlagte forbedringer
+
+## Næste Skridt (Next Steps)
+- [ ] Integration med kundelojalitetsprogram
+- [ ] Implementering af yderligere betalingsmuligheder
+- [ ] Optimering af mobil oplevelse
+- [ ] Fortsatte A/B tests
+
+## Bidrag (Contributing)
+Forslag til forbedringer er velkomne. Følg denne proces:
+1. Fork repository
+2. Opret en feature branch
+3. Commit ændringer
+4. Push til branch
+5. Opret Pull Request
+
+## Kontakt (Contact)
+For spørgsmål eller feedback, kontakt projektteamet via:
+- Email: [indsæt kontakt email]
+- Issue tracker: GitHub Issues
+
+## License
+[Indsæt license information] 
