@@ -1,100 +1,189 @@
-# Accord Music Store - Pre-Order System Documentation
+# Accord Music Store
 
-## Projektbeskrivelse (Project Description)
-Dette repository indeholder dokumentation for forbedringer af pre-order systemet i Accord Music Store, med fokus på at optimere brugeroplevelsen og øge konverteringsraten for forudbestillinger af musik.
+![Accord Music Store](public/assets/images/logo.png)
 
-## Dokumentationsstruktur (Documentation Structure)
+## Overview
 
-### 1. Pre-Order Forbedringer (`pre_order_improvements.md`)
-Detaljeret dokumentation af alle systemforbedringer, herunder:
-- UI/UX ændringer
-- Tekniske implementeringer
-- Konverteringsoptimering
-- KPI målinger
-- A/B test resultater
-- Bruger feedback
-- Fremtidige forbedringer
+Accord Music Store is a modern e-commerce platform specializing in pre-order management for vinyl records and music merchandise. Built with PHP 7.4+ and following modern development practices, it offers a responsive, user-friendly interface for music enthusiasts.
 
-### 2. UI Ændringer Visualisering (`pre_order_ui_changes.md`)
-Visuelle diagrammer der illustrerer:
-- Før og efter layouts
-- Nye UI elementer
-- Brugerrejse
-- Mobil responsivt design
+## Features
 
-## Hovedforbedringer (Key Improvements)
+- 🎵 Pre-order management system
+- 🛍️ Product catalog with detailed views
+- 🔍 Advanced search functionality
+- 📱 Responsive design
+- 🌐 Multi-language support (Danish/English)
+- 🔒 Secure payment integration
+- 📊 Analytics integration
+- 🤖 AI-powered artist biographies
 
-### UI/UX
-- ✨ Nyt to-kolonne layout
-- 📱 Forbedret mobil oplevelse
-- 🎯 Optimeret CTA placering
-- 📅 Tydelig leveringsdato visning
+## Technology Stack
 
-### Teknisk
-- 📊 Udvidet database schema
-- 📧 Email notifikationssystem
-- 💳 Integreret betalingsflow
-- 📈 Analytics integration
+- **Backend:** PHP 7.4+
+- **Database:** MySQL 5.7+
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Server:** Apache/Nginx
+- **Dependencies:** Composer
+- **AI Integration:** OpenAI API
 
-### Konvertering
-- 🔄 A/B testing implementering
-- 💡 Social proof elementer
-- ⏰ FOMO features
-- 🛡️ Tillidsmarkører
+## Project Structure
+```
+accord-music-store/
+├── public/                 # Web root
+│   ├── index.php          # Front controller
+│   ├── assets/            # Public assets (CSS, JS, images)
+│   └── .htaccess         # Apache configuration
+├── src/                   # Application source code
+│   ├── Config/           # Configuration classes
+│   ├── Controllers/      # Controller classes
+│   ├── Models/           # Model classes
+│   ├── Services/         # Business logic services
+│   └── Helpers/          # Helper functions
+├── templates/            # View templates
+│   ├── layout/          # Layout templates
+│   ├── product/         # Product templates
+│   └── error/           # Error pages
+├── database/            # Database files
+│   ├── migrations/      # Database migrations
+│   └── seeds/           # Database seeders
+├── storage/             # Application storage
+│   ├── logs/           # Application logs
+│   ├── cache/          # Cache files
+│   └── uploads/        # User uploads
+├── tests/              # Test suites
+│   ├── Unit/          # Unit tests
+│   └── Integration/   # Integration tests
+├── vendor/            # Composer dependencies
+└── config/           # Configuration files
+```
 
-## Resultater (Results)
-- 12% højere konvertering med ny CTA tekst
-- 8% forbedring med to-kolonne layout
-- Positiv brugerfeedback på ny leveringsdato visning
+## Prerequisites
 
-## Teknologier (Technologies)
-- Frontend: HTML, CSS, JavaScript
-- Backend: PHP
-- Database: MySQL
-- Analytics: Google Analytics/DataLayer
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Composer
+- Apache/Nginx web server
+- Node.js (for frontend asset compilation)
 
-## Diagrammer (Diagrams)
-Alle diagrammer er lavet med Mermaid.js og kan ses direkte i GitHub. Diagrammerne inkluderer:
-- System arkitektur
-- UI flows
-- Brugerrejse
-- Responsivt design
+## Installation
 
-## Brug af Dokumentationen (Using the Documentation)
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-username/accord-music-store.git
+cd accord-music-store
+```
 
-### For Udviklere
-1. Start med `pre_order_improvements.md` for tekniske detaljer
-2. Se database og logik lag implementeringer
-3. Gennemgå systemarkitektur diagrammet
+2. **Install PHP dependencies:**
+```bash
+composer install
+```
 
-### For UX/Design
-1. Se `pre_order_ui_changes.md` for visuelle ændringer
-2. Gennemgå før/efter layouts
-3. Undersøg brugerrejse diagrammet
+3. **Configure environment:**
+```bash
+cp .env.example .env
+# Edit .env with your settings
+```
 
-### For Product Managers
-1. Fokuser på KPI målinger i `pre_order_improvements.md`
-2. Gennemgå A/B test resultater
-3. Se planlagte forbedringer
+4. **Set up database:**
+```bash
+# Create database and user
+mysql -u root -p
+CREATE DATABASE accord_db;
+CREATE USER 'accord_user'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON accord_db.* TO 'accord_user'@'localhost';
+FLUSH PRIVILEGES;
 
-## Næste Skridt (Next Steps)
-- [ ] Integration med kundelojalitetsprogram
-- [ ] Implementering af yderligere betalingsmuligheder
-- [ ] Optimering af mobil oplevelse
-- [ ] Fortsatte A/B tests
+# Run migrations and seeds
+mysql -u root -p accord_db < database/migrations/001_create_products.sql
+mysql -u root -p accord_db < database/seeds/initial_data.sql
+```
 
-## Bidrag (Contributing)
-Forslag til forbedringer er velkomne. Følg denne proces:
-1. Fork repository
-2. Opret en feature branch
-3. Commit ændringer
-4. Push til branch
-5. Opret Pull Request
+5. **Configure web server:**
+   - For Apache: Ensure mod_rewrite is enabled
+   - For Nginx: Configure URL rewriting according to the provided nginx.conf
 
-## Kontakt (Contact)
-For spørgsmål eller feedback, kontakt projektteamet via:
-- Email: [indsæt kontakt email]
-- Issue tracker: GitHub Issues
+6. **Set permissions:**
+```bash
+chmod -R 755 public/
+chmod -R 777 storage/
+```
+
+7. **Start development server:**
+```bash
+php -S localhost:8000 -t public
+```
+
+## Development
+
+### Coding Standards
+- Follow PSR-12 coding standards
+- Use meaningful variable and function names
+- Document all methods and classes
+- Write unit tests for new features
+
+### Git Workflow
+1. Create feature branch from develop
+2. Make changes and commit
+3. Write/update tests
+4. Create pull request
+5. Code review
+6. Merge to develop
+
+### Testing
+```bash
+# Run all tests
+./vendor/bin/phpunit
+
+# Run specific test suite
+./vendor/bin/phpunit --testsuite unit
+```
+
+## Deployment
+
+1. **Prepare for deployment:**
+```bash
+# Update dependencies
+composer install --no-dev --optimize-autoloader
+
+# Clear cache
+php artisan cache:clear
+```
+
+2. **Environment setup:**
+   - Update .env for production
+   - Configure error reporting
+   - Set up SSL certificates
+
+3. **Database:**
+   - Run migrations
+   - Verify data integrity
+
+4. **Server configuration:**
+   - Configure web server
+   - Set up cron jobs
+   - Configure backup system
+
+## Monitoring
+
+- Application logs: `/storage/logs/`
+- Error tracking: Sentry/Bugsnag
+- Performance monitoring: New Relic
+- Server monitoring: Datadog
+
+## Contributing
+
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create Pull Request
+
+## Support
+
+- Technical issues: Create GitHub issue
+- Security vulnerabilities: security@accordmusic.com
+- General inquiries: support@accordmusic.com
 
 ## License
-[Indsæt license information] 
+
+Proprietary - All rights reserved. © 2024 Accord Music Store 

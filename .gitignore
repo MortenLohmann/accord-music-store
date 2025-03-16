@@ -1,13 +1,51 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment files
+.env
+.env.backup
+.env.production
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.DS_Store
+
+# Cache and logs
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# Database
+*.sqlite
+*.sqlite3
+
+# Compiled assets
+/public/hot
+/public/storage
+/public/css
+/public/js
+/public/mix-manifest.json
+
+# Testing
+.phpunit.result.cache
+/coverage/
+
+# Misc
+*.log
+*.swp
+Thumbs.db
+
 # Ignore configuration files with sensitive data
 config.php
-.env
 
 # Ignore generated placeholder images
 *-placeholder.png
-
-# Ignore OS files
-.DS_Store
-Thumbs.db 
 
 # Python virtual environment
 venv/

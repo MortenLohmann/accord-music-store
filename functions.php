@@ -9,22 +9,11 @@
  * @param string $image_url The original image URL from database
  * @return string The image URL to use (original or placeholder)
  */
-function get_album_image_url($image_url) {
-    // Placeholder image path
-    $placeholder = 'album-placeholder.png';
-    
-    // If no image URL is provided, return placeholder
+function get_album_image_url($image_url = '') {
     if (empty($image_url)) {
-        return $placeholder;
+        return 'images/van-halen-dallas-1991.jpg';
     }
-    
-    // Check if the image file exists
-    if (file_exists($image_url)) {
-        return $image_url;
-    }
-    
-    // If file doesn't exist, return placeholder
-    return $placeholder;
+    return $image_url;
 }
 
 /**
@@ -43,15 +32,8 @@ function format_danish_price($price) {
  * @param string $release_date The release date in MySQL format (YYYY-MM-DD)
  * @return bool True if release date is in the future
  */
-function is_future_release($release_date) {
-    if (empty($release_date)) {
-        return false;
-    }
-    
-    $release = new DateTime($release_date);
-    $today = new DateTime();
-    
-    return $release > $today;
+function is_future_release($date) {
+    return strtotime($date) > time();
 }
 
 /**
@@ -61,11 +43,17 @@ function is_future_release($release_date) {
  * @return string Formatted date
  */
 function format_danish_date($date) {
-    if (empty($date)) {
-        return '';
-    }
+    $months = array(
+        '01' => 'JANUAR', '02' => 'FEBRUAR', '03' => 'MARTS',
+        '04' => 'APRIL', '05' => 'MAJ', '06' => 'JUNI',
+        '07' => 'JULI', '08' => 'AUGUST', '09' => 'SEPTEMBER',
+        '10' => 'OKTOBER', '11' => 'NOVEMBER', '12' => 'DECEMBER'
+    );
     
-    $datetime = new DateTime($date);
-    return $datetime->format('d.m.Y');
+    $date_parts = explode('-', $date);
+    if (count($date_parts) === 3) {
+        return $date_parts[2] . '. ' . $months[$date_parts[1]] . ' ' . $date_parts[0];
+    }
+    return $date;
 }
 ?> 
